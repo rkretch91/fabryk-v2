@@ -32,6 +32,8 @@ module.exports = {
       colors: {
         primary: colors.teal,
         gray: colors.neutral,
+        teal: '#D6FFF6',
+        indigo: '#231651',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -62,11 +64,11 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.teal'),
             },
             code: {
               color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.teal'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -80,7 +82,7 @@ module.exports = {
               content: 'none',
             },
             details: {
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.teal'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -130,13 +132,13 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.indigo'),
             },
             code: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.indigo'),
             },
             details: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.indigo'),
             },
             hr: { borderColor: theme('colors.gray.700') },
             'ol li::marker': {
