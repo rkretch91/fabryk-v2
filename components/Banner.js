@@ -16,10 +16,34 @@ export default function Banner() {
             height={1200}
             className="absolute -bottom-20 left-0"
           />
-          <Image src="/static/images/banner/pizza.png" alt="pizza" width={500} height={500} />
-          <Image src="/static/images/banner/train.png" alt="train" width={500} height={500} />
-          <Image src="/static/images/banner/tree.png" alt="tree" width={500} height={500} />
-          <Image src="/static/images/banner/us.png" alt="us" width={500} height={500} />
+          <Image
+            src="/static/images/banner/pizza.png"
+            alt="pizza"
+            width={700}
+            height={700}
+            className="absolute -bottom-44 z-50"
+          />
+          <Image
+            src="/static/images/banner/train.png"
+            alt="train"
+            width={1300}
+            height={1300}
+            className="absolute -bottom-20 right-0 z-30"
+          />
+          <Image
+            src="/static/images/banner/tree.png"
+            alt="tree"
+            width={1000}
+            height={1000}
+            className="absolute right-0 -bottom-5 z-20"
+          />
+          <Image
+            src="/static/images/banner/us.png"
+            alt="us"
+            width={500}
+            height={500}
+            className="absolute top-0 left-96 z-50"
+          />
         </>
       ) : (
         <>
