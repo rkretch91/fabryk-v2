@@ -14,35 +14,35 @@ export default function Banner() {
             alt="bunker"
             width={1200}
             height={1200}
-            className="absolute -bottom-20 left-0"
+            class="w-6/6 absolute bottom-16 z-10 sm:bottom-40 md:bottom-80 lg:bottom-16 lg:w-5/6 xl:-bottom-4 xl:w-4/6"
           />
           <Image
             src="/static/images/banner/pizza.png"
             alt="pizza"
             width={700}
             height={700}
-            className="absolute -bottom-44 z-50"
+            className="absolute -bottom-16 -right-24 z-50 sm:bottom-16 sm:-right-16 sm:w-4/6 lg:-bottom-40 lg:w-3/6 xl:-bottom-44 xl:left-0 xl:w-2/6"
           />
           <Image
             src="/static/images/banner/train.png"
             alt="train"
             width={1300}
             height={1300}
-            className="absolute -bottom-20 right-0 z-30"
+            className="xs:invisible invisible absolute -bottom-16 right-0 z-30 w-4/6 sm:invisible md:invisible lg:invisible xl:visible"
           />
           <Image
             src="/static/images/banner/tree.png"
             alt="tree"
             width={1000}
             height={1000}
-            className="absolute right-0 -bottom-5 z-20"
+            className="sm:z-5 sm:w-6/6 absolute -right-20 sm:bottom-80 sm:z-0 md:bottom-96 md:z-0 md:w-5/6 lg:bottom-16 lg:z-20 lg:w-3/6"
           />
           <Image
             src="/static/images/banner/us.png"
             alt="us"
             width={500}
             height={500}
-            className="absolute top-0 left-96 z-50"
+            className="xs:w-1/3 absolute top-16 z-50 w-4/6 sm:left-64 sm:top-60 sm:w-3/6 md:left-28 lg:top-0 lg:w-2/4 xl:top-0 xl:w-1/4"
           />
         </>
       ) : (
