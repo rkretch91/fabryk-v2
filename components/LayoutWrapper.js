@@ -1,32 +1,45 @@
 import { Inter } from '@next/font/google'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import lightModeLogo from '@/data/the-fabryk-logo-purple.png'
+import darkModeLogo from '@/data/the-fabryk-logo-teal.png'
 import Link from './Link'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useTheme } from 'next-themes'
+import Image from './Image'
 const inter = Inter({
   subsets: ['latin'],
 })
 const LayoutWrapper = ({ children }) => {
+  const { theme, resolvedTheme } = useTheme()
+  const isDarkTheme = theme === 'dark' || resolvedTheme === 'dark'
+
   return (
     <>
       <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
-        <header className="flex items-center justify-between py-10">
+        <header className="container m-auto flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  {isDarkTheme ? (
+                    <Image
+                      src={darkModeLogo}
+                      alt="Logo dark mode the Fabryk"
+                      width={400}
+                      height={400}
+                    />
+                  ) : (
+                    <Image
+                      src={lightModeLogo}
+                      alt="Logo dark mode the Fabryk"
+                      width={400}
+                      height={400}
+                    />
+                  )}
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
               </div>
             </Link>
           </div>
