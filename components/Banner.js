@@ -14,7 +14,7 @@ export default function Banner() {
             alt="bunker"
             width={1200}
             height={1200}
-            class="w-6/6 absolute bottom-16 z-10 sm:bottom-40 md:bottom-80 lg:bottom-16 lg:w-5/6 xl:-bottom-4 xl:w-4/6"
+            className="w-6/6 absolute bottom-16 z-10 sm:bottom-40 md:bottom-80 lg:bottom-16 lg:w-5/6 xl:-bottom-4 xl:w-4/6"
           />
           <Image
             src="/static/images/banner/pizza.png"
@@ -47,26 +47,40 @@ export default function Banner() {
         </>
       ) : (
         <>
-          <Image src="/static/images/banner/church.png" alt="church" width={500} height={500} />
+          <Image
+            src="/static/images/banner/church.png"
+            alt="church"
+            width={1200}
+            height={1200}
+            className="w-6/6 absolute bottom-0 z-10 lg:w-5/6 xl:w-4/6"
+          />
           <Image
             src="/static/images/banner/pizza-fritta.png"
             alt="pizza-fritta"
+            width={700}
+            height={700}
+            className="absolute -bottom-16 -left-24 z-50 w-4/6 sm:-bottom-32 sm:-right-16 sm:w-4/6 md:w-3/6 lg:-bottom-40 lg:w-3/6 xl:-bottom-44 xl:left-0 xl:w-2/6"
+          />
+          <Image
+            src="/static/images/banner/sign.png"
+            alt="sign"
             width={500}
             height={500}
+            className="absolute z-50 w-4/6 md:w-2/6 xl:w-1/6"
           />
-          <Image src="/static/images/banner/sign.png" alt="sign" width={500} height={500} />
           <Image
             src="/static/images/banner/spacesuit.png"
             alt="spacesuit"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
+            className="absolute -top-16 right-0 z-50 w-2/6 md:w-2/6 lg:left-64 xl:right-96 xl:left-auto xl:w-2/6"
           />
-          <Image src="/static/images/banner/us-night.png" alt="us-night" width={500} height={500} />
           <Image
-            src="/static/images/banner/aperitivo.png"
-            alt="aperitivo"
+            src="/static/images/banner/us-night.png"
+            alt="us-night"
             width={500}
             height={500}
+            className="xs:w-1/3 absolute top-16 -right-4 z-30 w-4/6 sm:top-60 sm:w-3/6 lg:top-auto lg:bottom-0 xl:bottom-0 xl:w-2/6 xl:w-1/4"
           />
         </>
       )}
