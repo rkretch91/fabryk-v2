@@ -1,13 +1,10 @@
 import { useTheme } from 'next-themes'
 import Image from './Image'
 
-export default function Banner() {
-  const { theme, resolvedTheme } = useTheme()
-  const isDarkTheme = theme === 'dark' || resolvedTheme === 'dark'
-
+export default function Banner({ isDarkMode }) {
   return (
     <div className="home-banner relative space-y-2 pt-6 pb-8 md:space-y-5">
-      {!isDarkTheme ? (
+      {!isDarkMode ? (
         <>
           <Image
             src="/static/images/banner/bunker.png"

@@ -8,6 +8,7 @@ import { NewsletterForm } from 'pliny/ui/NewsletterForm'
 import { allBlogs } from 'contentlayer/generated'
 import SectionContainer from '@/components/SectionContainer'
 import Banner from '@/components/Banner'
+import { useTheme } from 'next-themes'
 const MAX_DISPLAY = 5
 export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs)
@@ -19,11 +20,14 @@ export const getStaticProps = async () => {
   }
 }
 export default function Home({ posts }) {
+  const { theme, resolvedTheme } = useTheme()
+  const isDarkMode = theme === 'dark' || resolvedTheme === 'dark'
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <Banner />
+        <Banner isDarkMode={isDarkMode} />
         <SectionContainer>
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">
             {!posts.length && 'No posts found.'}
