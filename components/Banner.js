@@ -66,7 +66,7 @@ export default function Banner() {
             alt="sign"
             width={500}
             height={500}
-            className="absolute z-50 w-4/6 md:w-2/6 xl:w-1/6"
+            className="absolute z-30 w-4/6 md:w-2/6 xl:w-1/6"
           />
           <Image
             src="/static/images/banner/spacesuit.png"
@@ -80,7 +80,7 @@ export default function Banner() {
             alt="us-night"
             width={500}
             height={500}
-            className="xs:w-1/3 absolute top-16 -right-4 z-30 w-4/6 sm:top-60 sm:w-3/6 lg:top-auto lg:bottom-0 xl:bottom-0 xl:w-2/6 xl:w-1/4"
+            className="xs:w-1/3 absolute top-16 -right-4 z-40 w-4/6 sm:top-60 sm:w-3/6 lg:top-auto lg:bottom-0 xl:bottom-0 xl:w-2/6 xl:w-1/4"
           />
         </>
       )}
