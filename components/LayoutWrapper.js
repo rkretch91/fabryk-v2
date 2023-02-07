@@ -13,9 +13,6 @@ const inter = Inter({
   subsets: ['latin'],
 })
 const LayoutWrapper = ({ children }) => {
-  const { theme, resolvedTheme } = useTheme()
-  const isDarkTheme = theme === 'dark' || resolvedTheme === 'dark'
-
   return (
     <>
       <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
@@ -24,21 +21,20 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  {isDarkTheme ? (
-                    <Image
-                      src={darkModeLogo}
-                      alt="Logo dark mode the Fabryk"
-                      width={400}
-                      height={400}
-                    />
-                  ) : (
-                    <Image
-                      src={lightModeLogo}
-                      alt="Logo dark mode the Fabryk"
-                      width={400}
-                      height={400}
-                    />
-                  )}
+                  <Image
+                    src={darkModeLogo}
+                    alt="Logo dark mode the Fabryk"
+                    width={400}
+                    height={400}
+                    className="invisible dark:visible"
+                  />
+                  <Image
+                    src={lightModeLogo}
+                    alt="Logo dark mode the Fabryk"
+                    width={400}
+                    height={400}
+                    className="visible dark:invisible"
+                  />
                 </div>
               </div>
             </Link>
