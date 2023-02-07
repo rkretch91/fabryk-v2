@@ -26,14 +26,14 @@ const LayoutWrapper = ({ children }) => {
                     alt="Logo dark mode the Fabryk"
                     width={400}
                     height={400}
-                    className="invisible dark:visible"
+                    className="hidden dark:block"
                   />
                   <Image
                     src={lightModeLogo}
                     alt="Logo dark mode the Fabryk"
                     width={400}
                     height={400}
-                    className="visible dark:invisible"
+                    className="block dark:hidden"
                   />
                 </div>
               </div>

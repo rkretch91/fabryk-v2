@@ -20,14 +20,11 @@ export const getStaticProps = async () => {
   }
 }
 export default function Home({ posts }) {
-  const { theme, resolvedTheme } = useTheme()
-  const isDarkMode = theme === 'dark' || resolvedTheme === 'dark'
-
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <Banner isDarkMode={isDarkMode} />
+        <Banner />
         <SectionContainer>
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">
             {!posts.length && 'No posts found.'}
