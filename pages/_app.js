@@ -11,16 +11,16 @@ import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from 'pliny/analytics'
 import { SearchProvider } from 'pliny/search'
 import LayoutWrapper from '@/components/LayoutWrapper'
+import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true)
 
+  const router = useRouter()
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 500)
-  }, [])
+    router.isReady && setLoading(false)
+  }, [router.isReady])
 
   return (
     <>
