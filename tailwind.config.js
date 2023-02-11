@@ -20,6 +20,12 @@ module.exports = {
       spacing: {
         '9/16': '56.25%',
       },
+      height: (theme) => ({
+        'screen/2': '50vh',
+        'screen/3': 'calc(100vh / 3)',
+        'screen/4': 'calc(100vh / 4)',
+        'screen/5': 'calc(100vh / 5)',
+      }),
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
@@ -27,7 +33,8 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['"Courier New"', ...fontFamily.sans],
+        mono: ['"Courier New"', ...fontFamily.mono],
       },
       colors: {
         primary: colors.teal,
@@ -52,7 +59,7 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             h2: {
-              fontWeight: '700',
+              fontWeight: '900',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },

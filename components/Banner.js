@@ -54,7 +54,7 @@ export default function Banner() {
           alt="pizza-fritta"
           width={700}
           height={700}
-          className="invisible absolute -bottom-16 -left-24 z-50 w-4/6 dark:visible sm:-bottom-32 sm:-right-16 sm:w-4/6 md:w-3/6 lg:-bottom-40 lg:w-3/6 xl:-bottom-44 xl:left-0 xl:w-2/6"
+          className="invisible absolute -bottom-16 -left-24 z-40 w-4/6 dark:visible sm:-bottom-32 sm:-right-16 sm:w-4/6 md:w-3/6 lg:-bottom-40 lg:w-3/6 xl:-bottom-44 xl:left-0 xl:w-2/6"
         />
         <Image
           src="/static/images/banner/sign.png"

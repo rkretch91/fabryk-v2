@@ -15,7 +15,7 @@ const inter = Inter({
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
+      <div className={`${inter.className} flex h-screen flex-col justify-between font-mono`}>
         <header className="container m-auto flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>

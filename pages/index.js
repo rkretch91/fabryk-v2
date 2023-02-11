@@ -4,10 +4,10 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
-import { NewsletterForm } from 'pliny/ui/NewsletterForm'
 import { allBlogs } from 'contentlayer/generated'
 import SectionContainer from '@/components/SectionContainer'
 import Banner from '@/components/Banner'
+import Intro from '@/components/Intro'
 import { useTheme } from 'next-themes'
 const MAX_DISPLAY = 5
 export const getStaticProps = async () => {
@@ -23,8 +23,11 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-200 font-mono dark:divide-gray-700">
         <Banner />
+        <SectionContainer>
+          <Intro />
+        </SectionContainer>
         <SectionContainer>
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">
             {!posts.length && 'No posts found.'}
@@ -92,11 +95,6 @@ export default function Home({ posts }) {
           </div>
         )}
       </SectionContainer>
-      {siteMetadata.newsletter.provider && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
     </>
   )
 }
