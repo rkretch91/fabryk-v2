@@ -10,9 +10,12 @@ export default function Intro() {
         <h1>We are Fabio and Ryan.</h1>
         <h1>
           Welcome to our{' '}
-          <u>
-            <Typed strings={['gay', 'nomadic', 'sexual']} typeSpeed={40} backSpeed={50} loop />
-          </u>
+          <Typed
+            strings={['gay', 'nomadic', 'kinky', 'random', 'confusing', 'weird']}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          />
           life.
         </h1>
         {siteMetadata.newsletter.provider && (

@@ -27,3 +27,41 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+input {
+  background-color: white !important;
+  border: none;
+  color: theme('colors.indigo');
+}
+
+input:focus {
+  --tw-ring-opacity: 0 !important;
+}
+
+.dark form button {
+  background-color: theme('colors.teal');
+  box-shadow: 8px 8px rgba(214, 255, 246, 0.43);
+  color: theme('colors.indigo');
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.light form button {
+  background-color: theme('colors.indigo');
+  box-shadow: 8px 8px rgba(35,22,81, 0.43);
+  color: theme('colors.teal');
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.light form button:hover {
+  background-color: rgba(35,22,81, 0.80) !important;
+}
+
+/* .light input {
+  background-color: red !important;
+  border: none;
+} */
+
+
+

@@ -4,10 +4,13 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
+import { Facebook } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { FacebookShareButton, FacebookIcon } from 'next-share'
+
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/master/data/${path}`
 const discussUrl = (path) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
@@ -25,6 +28,13 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/${path}`} authorDetails={authorDetails} {...content} />
       <ScrollTopAndComment />
+      <FacebookShareButton
+        url={`${siteMetadata.siteUrl}/${path}`}
+        quote={'next-share is a social share buttons for your next React apps.'}
+        hashtag={'#nextshare'}
+      >
+        <FacebookIcon size={32} round />
+      </FacebookShareButton>
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
