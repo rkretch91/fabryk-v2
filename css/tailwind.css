@@ -58,6 +58,10 @@ input:focus {
   background-color: rgba(35,22,81, 0.80) !important;
 }
 
+.home-page-card {
+  height: 200px;
+}
+
 /* .light input {
   background-color: red !important;
   border: none;

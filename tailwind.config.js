@@ -26,6 +26,10 @@ module.exports = {
         'screen/4': 'calc(100vh / 4)',
         'screen/5': 'calc(100vh / 5)',
       }),
+      dropShadow: {
+        teal: '8px 8px rgba(214, 255, 246, 0.43)',
+        indigo: '8px 8px rgba(35, 22, 81, 0.43)',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
