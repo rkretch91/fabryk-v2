@@ -87,7 +87,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul className="columns-1 md:columns-2">
+        <ul className="columns-1 gap-8 md:columns-2">
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((post) => {
             const { slug, date, title, summary, tags, images } = post

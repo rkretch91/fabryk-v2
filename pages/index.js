@@ -10,7 +10,7 @@ import Banner from '@/components/Banner'
 import Intro from '@/components/Intro'
 import PostCard from '@/components/PostCard'
 import { useTheme } from 'next-themes'
-const MAX_DISPLAY = 4
+const MAX_DISPLAY = 6
 export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs)
   const posts = allCoreContent(sortedPosts)
