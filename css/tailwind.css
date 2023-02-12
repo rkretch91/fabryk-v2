@@ -38,7 +38,7 @@ input:focus {
   --tw-ring-opacity: 0 !important;
 }
 
-.dark form button {
+.dark form button, .dark .theme-button {
   background-color: theme('colors.teal');
   box-shadow: 8px 8px rgba(214, 255, 246, 0.43);
   color: theme('colors.indigo');
@@ -46,7 +46,7 @@ input:focus {
   font-weight: bold;
 }
 
-.light form button {
+.light form button, .light .theme-button {
   background-color: theme('colors.indigo');
   box-shadow: 8px 8px rgba(35,22,81, 0.43);
   color: theme('colors.teal');

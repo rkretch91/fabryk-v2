@@ -7,7 +7,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
       <div
         style={{ backgroundImage: containsImages ? `url(${images[0]})` : 'none' }}
         className={`md h-[300px] w-full overflow-hidden
-         rounded-md bg-indigo p-8 text-teal drop-shadow-indigo dark:bg-teal dark:text-indigo dark:drop-shadow-teal ${
+         rounded-md bg-indigo bg-cover p-8 text-teal drop-shadow-indigo dark:bg-teal dark:text-indigo dark:drop-shadow-teal ${
            containsImages && 'relative'
          }`}
       >
@@ -16,7 +16,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
         >
           <h2
             className={`mb-4 text-2xl font-bold leading-8 tracking-tight ${
-              containsImages && 'w-11/12 bg-teal p-2 dark:bg-indigo'
+              containsImages && 'max-w-[95%] bg-teal p-2 dark:bg-indigo'
             }`}
           >
             {title}

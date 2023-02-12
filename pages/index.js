@@ -30,10 +30,10 @@ export default function Home({ posts }) {
           <Intro />
         </SectionContainer>
         <SectionContainer>
-          <ul className="columns-1 gap-8 md:columns-2">
+          <ul className="mb-4 columns-1 gap-8 md:columns-2">
             {!posts.length && 'No posts found.'}
             {posts.slice(0, MAX_DISPLAY).map((post) => {
-              const { slug, date, title, summary, tags, images } = post
+              const { slug, title, summary, tags, images } = post
               return (
                 <li key={slug} className="py-4">
                   <PostCard
@@ -51,15 +51,11 @@ export default function Home({ posts }) {
       </div>
       <SectionContainer>
         {posts.length > MAX_DISPLAY && (
-          <div className="flex justify-end text-base font-medium leading-6">
-            <Link
-              href="/blog"
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-              aria-label="All posts"
-            >
-              All Posts &rarr;
+          <button className="theme-button float-right w-auto rounded p-2 font-mono text-base font-medium leading-6">
+            <Link href="/blog" aria-label="All posts">
+              More, More, More
             </Link>
-          </div>
+          </button>
         )}
       </SectionContainer>
     </>
