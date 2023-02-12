@@ -7,7 +7,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
       <div
         style={{ backgroundImage: containsImages ? `url(${images[0]})` : 'none' }}
         className={`md h-[300px] w-full overflow-hidden
-         rounded-md bg-indigo bg-cover p-8 text-teal drop-shadow-indigo dark:bg-teal dark:text-indigo dark:drop-shadow-teal ${
+         rounded-md bg-indigo bg-cover p-8 text-teal drop-shadow-indigo hover:scale-105 dark:bg-teal dark:text-indigo dark:drop-shadow-teal ${
            containsImages && 'relative'
          }`}
       >
