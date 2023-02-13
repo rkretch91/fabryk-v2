@@ -4,12 +4,20 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
-import { Facebook } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { FacebookShareButton, FacebookIcon } from 'next-share'
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  EmailShareButton,
+  EmailIcon,
+} from 'next-share'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/master/data/${path}`
 const discussUrl = (path) =>
@@ -24,17 +32,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
   const [loadComments, setLoadComments] = useState(false)
+  console.log(`${siteMetadata.siteUrl}/${path}`)
   return (
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/${path}`} authorDetails={authorDetails} {...content} />
       <ScrollTopAndComment />
-      <FacebookShareButton
-        url={`${siteMetadata.siteUrl}/${path}`}
-        quote={'next-share is a social share buttons for your next React apps.'}
-        hashtag={'#nextshare'}
-      >
-        <FacebookIcon size={32} round />
-      </FacebookShareButton>
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
@@ -149,6 +151,38 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     )}
                   </div>
                 )}
+                <div className="flex justify-between py-4 xl:block xl:space-y-4 xl:py-8">
+                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                    Share this article
+                  </h2>
+                  <FacebookShareButton
+                    url={`${siteMetadata.siteUrl}/${path}`}
+                    hashtag={tags && tags.map((tag) => `#${tag}`).join()}
+                  >
+                    <FacebookIcon size={32} round style={{ marginRight: '4px' }} />
+                  </FacebookShareButton>
+                  <TwitterShareButton
+                    url={`${siteMetadata.siteUrl}/${path}`}
+                    title={`${title} on The Fabryk`}
+                    hashtags={tags && tags.map((tag) => `${tag}`)}
+                  >
+                    <TwitterIcon size={32} round style={{ marginRight: '4px' }} />
+                  </TwitterShareButton>
+                  <WhatsappShareButton
+                    url={`${siteMetadata.siteUrl}/${path}`}
+                    title={`${title} on The Fabryk`}
+                    separator=" || "
+                  >
+                    <WhatsappIcon size={32} round style={{ marginRight: '4px' }} />
+                  </WhatsappShareButton>
+                  <EmailShareButton
+                    url={`${siteMetadata.siteUrl}/${path}`}
+                    subject={`Check out ${title} on The Fabryk`}
+                    body="Here is a pretty cool post from the guys at The Fabryk"
+                  >
+                    <EmailIcon size={32} round />
+                  </EmailShareButton>
+                </div>
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
