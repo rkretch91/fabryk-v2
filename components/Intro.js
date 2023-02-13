@@ -1,4 +1,3 @@
-import { useTheme } from 'next-themes'
 import Typed from 'react-typed'
 import { NewsletterForm } from 'pliny/ui/NewsletterForm'
 import siteMetadata from '@/data/siteMetadata'

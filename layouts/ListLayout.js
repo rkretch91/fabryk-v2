@@ -2,9 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { formatDate } from 'pliny/utils/formatDate'
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 import PostCard from '@/components/PostCard'
-import siteMetadata from '@/data/siteMetadata'
 function Pagination({ totalPages, currentPage }) {
   const router = useRouter()
   const basePath = router.pathname.split('/')[1]
@@ -87,17 +85,24 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul className="columns-1 gap-8 md:columns-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((post) => {
-            const { slug, date, title, summary, tags, images } = post
+            const { slug, title, summary, tags, images } = post
             return (
-              <li key={slug} className="py-4">
-                <PostCard title={title} summary={summary} tags={tags} images={images} slug={slug} />
-              </li>
+              <>
+                <PostCard
+                  title={title}
+                  summary={summary}
+                  tags={tags}
+                  images={images}
+                  slug={slug}
+                  key={slug}
+                />
+              </>
             )
           })}
-        </ul>
+        </div>
       </div>
       <div className="container m-auto">
         {pagination && pagination.totalPages > 1 && !searchValue && (
