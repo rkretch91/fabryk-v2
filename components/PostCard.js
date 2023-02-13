@@ -24,9 +24,9 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
           <div className="mb-4 flex gap-4 font-bold">
             {tags.slice(0, 3).map((tag) => (
               <p
-                className={`font-sans font-bold ${
-                  containsImages && 'bg-teal p-1 dark:bg-indigo'
-                }`}
+                className={
+                  'bg-teal p-1 font-sans font-bold text-indigo opacity-90 dark:bg-indigo dark:text-teal'
+                }
                 key={tag}
               >
                 {tag.toUpperCase()}
