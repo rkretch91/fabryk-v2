@@ -13,7 +13,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
       >
         <div
           className={`${
-            containsImages && 'absolute bottom-8 left-8 max-w-[95%] text-indigo dark:text-teal'
+            containsImages && 'absolute bottom-8 left-8 max-w-[90%] text-indigo dark:text-teal'
           }`}
         >
           <h2
@@ -35,7 +35,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
               </p>
             ))}
           </div>
-          {!containsImages && <p>{summary}</p>}
+          <div className="font-light">{!containsImages && <p>{summary}</p>}</div>
         </div>
       </div>
     </Link>

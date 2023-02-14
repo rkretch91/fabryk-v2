@@ -75,11 +75,11 @@ module.exports = {
               color: theme('colors.indigo'),
             },
             pre: {
-              backgroundColor: theme('colors.teal'),
+              backgroundColor: theme('colors.indigo'),
             },
             code: {
               color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.teal'),
+              backgroundColor: theme('colors.indigo'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
