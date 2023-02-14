@@ -12,11 +12,13 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
          }`}
       >
         <div
-          className={`${containsImages && 'absolute bottom-8 left-8 text-indigo dark:text-teal'}`}
+          className={`${
+            containsImages && 'absolute bottom-8 left-8 max-w-[95%] text-indigo dark:text-teal'
+          }`}
         >
           <h2
-            className={`mb-4 text-2xl font-bold leading-8 tracking-tight ${
-              containsImages && 'max-w-[95%] bg-teal p-2 dark:bg-indigo'
+            className={`mb-4 text-2xl font-bold ${
+              containsImages && 'max-w-[100%] bg-teal p-2 dark:bg-indigo'
             }`}
           >
             {title}

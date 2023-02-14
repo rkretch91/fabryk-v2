@@ -31,7 +31,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-teal font-mono text-indigo antialiased dark:bg-indigo dark:text-teal">
+        <body className="bg-teal font-sans text-indigo antialiased dark:bg-indigo dark:text-teal">
           <Main />
           <NextScript />
         </body>

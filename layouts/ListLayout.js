@@ -53,7 +53,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
   return (
     <>
-      <div className="container m-auto font-mono">
+      <div className="container m-auto font-sans">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="font-sans text-3xl font-medium tracking-tight text-indigo dark:text-teal sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             {title}

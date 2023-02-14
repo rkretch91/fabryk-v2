@@ -62,6 +62,10 @@ input:focus {
   height: 200px;
 }
 
+.dark hr {
+  border-color: theme('colors.teal');
+}
+
 /* .light input {
   background-color: red !important;
   border: none;

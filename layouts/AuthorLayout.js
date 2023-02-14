@@ -7,7 +7,7 @@ export default function AuthorLayout({ children, content }) {
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y divide-gray-200 font-mono dark:divide-gray-700">
+      <div className="divide-y divide-indigo font-sans dark:divide-teal">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="font-sans text-3xl font-normal leading-9 tracking-tight text-indigo dark:text-teal sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
@@ -33,6 +33,9 @@ export default function AuthorLayout({ children, content }) {
           </div>
           <div className="prose max-w-none pt-8 pb-8 font-sans font-light text-indigo dark:text-teal dark:prose-dark xl:col-span-2">
             {children}{' '}
+            <div className="flex items-center justify-center pt-4">
+              <NewsletterForm style={{ background: 'white !important' }} title="" />
+            </div>
             <Image
               src={'/static/images/about-us-1.jpg'}
               alt="ryan and fabio in dead sea"
@@ -40,9 +43,6 @@ export default function AuthorLayout({ children, content }) {
               height={1000}
               className="w-full object-cover"
             />
-            <div className="flex items-center justify-center pt-4">
-              <NewsletterForm style={{ background: 'white !important' }} title="" />
-            </div>
           </div>
         </div>
       </div>

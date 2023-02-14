@@ -1,15 +1,12 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import SectionContainer from '@/components/SectionContainer'
 import Banner from '@/components/Banner'
 import Intro from '@/components/Intro'
 import PostCard from '@/components/PostCard'
-import { useTheme } from 'next-themes'
 const MAX_DISPLAY = 6
 export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs)
@@ -24,7 +21,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-indigo divide-opacity-25 font-mono dark:divide-teal">
+      <div className="divide-y divide-indigo divide-opacity-25 font-sans dark:divide-teal">
         <Banner />
         <SectionContainer>
           <Intro />
@@ -51,7 +48,7 @@ export default function Home({ posts }) {
       </div>
       <SectionContainer>
         {posts.length > MAX_DISPLAY && (
-          <button className="theme-button float-right w-auto rounded p-2 font-mono text-base font-medium leading-6">
+          <button className="theme-button float-right w-auto rounded p-2 font-sans text-base font-medium leading-6">
             <Link href="/blog" aria-label="All posts">
               More, More, More
             </Link>
