@@ -20,9 +20,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
           </>
         )}
         <div
-          className={`${
-            containsImages && 'relative z-50 max-w-[90%] text-indigo dark:text-teal'
-          }`}
+          className={`${containsImages && 'relative z-50 max-w-[90%] text-indigo dark:text-teal'}`}
         >
           <h2
             className={`mb-4 text-2xl font-bold ${
