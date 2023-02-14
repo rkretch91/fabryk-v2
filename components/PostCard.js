@@ -5,15 +5,25 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
   return (
     <Link href={`/blog/${slug}`} aria-label={`Link to ${title}`}>
       <div
-        style={{ backgroundImage: containsImages ? `url(${images[0]})` : 'none' }}
         className={`md h-[300px] w-full overflow-hidden
          rounded-md bg-indigo bg-cover p-8 text-teal drop-shadow-indigo hover:scale-105 dark:bg-teal dark:text-indigo dark:drop-shadow-teal ${
            containsImages && 'relative'
          }`}
       >
+        {containsImages && (
+          <>
+            <Image
+              src={images[0]}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </>
+        )}
         <div
           className={`${
-            containsImages && 'absolute bottom-8 left-8 max-w-[90%] text-indigo dark:text-teal'
+            containsImages && 'absolute bottom-8 left-8 z-50 max-w-[90%] text-indigo dark:text-teal'
           }`}
         >
           <h2

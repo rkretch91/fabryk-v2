@@ -11,22 +11,11 @@ import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from 'pliny/analytics'
 import { SearchProvider } from 'pliny/search'
 import LayoutWrapper from '@/components/LayoutWrapper'
-import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 
 export default function App({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true)
-
-  const router = useRouter()
-  useEffect(() => {
-    router.isReady && setLoading(false)
-  }, [router.isReady])
-
   return (
     <>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
+      {
         <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
           <Head>
             <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -38,7 +27,7 @@ export default function App({ Component, pageProps }) {
             </SearchProvider>
           </LayoutWrapper>
         </ThemeProvider>
-      )}
+      }
     </>
   )
 }

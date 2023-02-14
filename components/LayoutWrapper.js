@@ -27,6 +27,7 @@ const LayoutWrapper = ({ children }) => {
                     width={400}
                     height={400}
                     className="hidden dark:block"
+                    loading="eager"
                   />
                   <Image
                     src={lightModeLogo}
@@ -34,6 +35,7 @@ const LayoutWrapper = ({ children }) => {
                     width={400}
                     height={400}
                     className="block dark:hidden"
+                    loading="eager"
                   />
                 </div>
               </div>
