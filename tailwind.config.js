@@ -37,7 +37,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['"Mostra Nuova"', ...fontFamily.sans],
+        sans: ['"Mukta"', ...fontFamily.sans],
         mono: ['"Courier New"', ...fontFamily.mono],
       },
       colors: {

@@ -38,7 +38,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
       <BlogSEO url={`${siteMetadata.siteUrl}/${path}`} authorDetails={authorDetails} {...content} />
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-indigo xl:dark:divide-teal">
+        <div className="font-sans xl:divide-y xl:divide-indigo xl:dark:divide-teal">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
@@ -93,7 +93,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dd>
             </dl>
             <div className="divide-y divide-indigo dark:divide-teal xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 text-indigo dark:prose dark:text-teal">
+              <div className="prose max-w-none pt-10 pb-8 font-light text-indigo dark:text-teal">
                 {children}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">

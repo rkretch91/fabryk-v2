@@ -30,7 +30,6 @@ export default function App({ Component, pageProps }) {
         <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
           <Head>
             <meta content="width=device-width, initial-scale=1" name="viewport" />
-            <link rel="stylesheet" href="https://use.typekit.net/gba5hsz.css"></link>
           </Head>
           <Analytics analyticsConfig={siteMetadata.analytics} />
           <LayoutWrapper>

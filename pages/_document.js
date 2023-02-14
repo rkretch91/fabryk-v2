@@ -24,6 +24,12 @@ class MyDocument extends Document {
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body className="bg-teal font-mono text-indigo antialiased dark:bg-indigo dark:text-teal">
           <Main />

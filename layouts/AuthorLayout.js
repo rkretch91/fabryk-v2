@@ -31,7 +31,7 @@ export default function AuthorLayout({ children, content }) {
               <SocialIcon kind="twitter" href={twitter} />
             </div>
           </div>
-          <div className="prose max-w-none pt-8 pb-8 text-indigo dark:text-teal dark:prose-dark xl:col-span-2">
+          <div className="prose max-w-none pt-8 pb-8 font-sans font-light text-indigo dark:text-teal dark:prose-dark xl:col-span-2">
             {children}{' '}
             <Image
               src={'/static/images/about-us-1.jpg'}
