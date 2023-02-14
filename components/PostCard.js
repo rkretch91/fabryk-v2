@@ -17,6 +17,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
               objectFit="cover"
               objectPosition="center"
               loading="eager"
+              style="z-40"
             />
           </>
         )}
