@@ -29,7 +29,7 @@ const postDateTemplate = {
   day: 'numeric',
 }
 export default function PostLayout({ content, authorDetails, next, prev, children }) {
-  const { path, slug, date, title, tags } = content
+  const { path, slug, date, title, tags, images } = content
   const basePath = path.split('/')[0]
   const [loadComments, setLoadComments] = useState(false)
   console.log(`${siteMetadata.siteUrl}/${path}`)
@@ -92,7 +92,21 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 </ul>
               </dd>
             </dl>
-            <div className="divide-y divide-indigo dark:divide-teal xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="xl:col-span-3 xl:row-span-2 xl:pb-0">
+              {images && images.length > 0 && (
+                <>
+                  {images.map((image) => (
+                    <Image
+                      width={1200}
+                      height={1200}
+                      src={image}
+                      key={image}
+                      alt={image}
+                      style={{ marginTop: '8px' }}
+                    />
+                  ))}
+                </>
+              )}
               <div className="prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
                 {children}
               </div>
