@@ -107,7 +107,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   ))}
                 </>
               )}
-              <div className="prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
+              <div className="dark:prose-marker:text-teal prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
                 {children}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
@@ -166,7 +166,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </div>
                 )}
                 <div className="flex justify-between py-4 xl:block xl:space-y-4 xl:py-8">
-                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                  <h2 className="text-xs uppercase tracking-wide text-indigo dark:text-teal">
                     Share this article
                   </h2>
                   <FacebookShareButton
@@ -201,7 +201,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="pt-4 xl:pt-8">
                 <Link
                   href={`/${basePath}`}
-                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                  className="text-indigo hover:text-primary-600 dark:text-teal dark:hover:text-primary-400"
                   aria-label="Back to the blog"
                 >
                   &larr; Back to the blog

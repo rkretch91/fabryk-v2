@@ -21,7 +21,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-indigo divide-opacity-25 font-sans dark:divide-teal">
+      <div className="divide-y divide-indigo divide-opacity-25 overflow-x-hidden font-sans dark:divide-teal">
         <Banner />
         <SectionContainer>
           <Intro />
