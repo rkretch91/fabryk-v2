@@ -66,5 +66,12 @@ input:focus {
   border-color: theme('colors.teal');
 }
 
+html, body {
+  max-width: 100%;
+}
+
+.mob-menu {
+  z-index: 100 !important;
+}
 
 

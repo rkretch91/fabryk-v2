@@ -3,22 +3,20 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'The Fabryk',
-  author: 'Ryan and Fabio',
+  author: 'Ryan Kretch and Fabio Marcato',
   headerTitle: 'The Fabryk',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    'We are a blog run by two gay digital nomads hoping to inspire others to travel the world. Here you will find posts about travel, lifestyle, entrepreneurship, culture, personal development, failures, stories, and fun.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://thefabryk.com',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  email: 'fabryan2022@gmail.com',
+  twitter: 'https://twitter.com/thefabryk',
+  youtube: 'https://youtube.com/@therealfabryk',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
