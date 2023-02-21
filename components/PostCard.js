@@ -5,7 +5,7 @@ const PostCard = ({ slug, title, summary, images }) => {
   return (
     <Link href={`/blog/${slug}`} aria-label={`Link to ${title}`}>
       <div
-        className={`post-card relative h-[300px] overflow-hidden rounded-md bg-indigo p-8 text-teal hover:scale-105 dark:bg-teal dark:text-indigo sm:drop-shadow-indigo dark:sm:drop-shadow-teal`}
+        className={`post-card relative h-[300px] overflow-hidden rounded-sm bg-indigo p-8 text-teal dark:bg-teal dark:text-indigo sm:drop-shadow-indigo dark:sm:drop-shadow-teal`}
       >
         {containsImages && (
           <>

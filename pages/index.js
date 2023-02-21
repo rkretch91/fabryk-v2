@@ -27,12 +27,12 @@ export default function Home({ posts }) {
           <Intro />
         </SectionContainer>
         <SectionContainer>
-          <ul className="mb-4 columns-1 gap-8 md:columns-2">
+          <ul className="mb-2 columns-1 gap-8 md:columns-2">
             {!posts.length && 'No posts found.'}
             {posts.slice(0, MAX_DISPLAY).map((post) => {
               const { slug, title, summary, tags, images } = post
               return (
-                <li key={slug} className="py-4">
+                <li key={slug} className="py-2">
                   <PostCard
                     title={title}
                     summary={summary}
@@ -48,7 +48,7 @@ export default function Home({ posts }) {
       </div>
       <SectionContainer>
         {posts.length > MAX_DISPLAY && (
-          <button className="theme-button float-right w-auto rounded p-2 font-sans text-base font-medium leading-6">
+          <button className="theme-button float-right w-auto rounded-sm p-2 font-sans text-base font-medium leading-6">
             <Link href="/blog" aria-label="All posts">
               More, More, More
             </Link>

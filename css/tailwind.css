@@ -32,6 +32,7 @@ input {
   background-color: white !important;
   border: none;
   color: theme('colors.indigo');
+  border-radius: 2px !important;
 }
 
 input:focus {
@@ -44,6 +45,7 @@ input:focus {
   color: theme('colors.indigo');
   font-size: 20px;
   font-weight: bold;
+  border-radius: 2px !important;
 }
 
 .light form button, .light .theme-button {
@@ -52,6 +54,7 @@ input:focus {
   color: theme('colors.teal');
   font-size: 20px;
   font-weight: bold;
+  border-radius: 2px !important;
 }
 
 .light form button:hover {
@@ -72,6 +75,10 @@ html, body {
 
 .mob-menu {
   z-index: 100 !important;
+}
+
+.post-card:hover img, .post-card:hover > div  {
+  opacity: 70% !important;
 }
 
 .post-card:hover .post-card-title-wrapper {
