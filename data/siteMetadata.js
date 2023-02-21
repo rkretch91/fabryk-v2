@@ -6,7 +6,7 @@ const siteMetadata = {
   author: 'Ryan and Fabio',
   headerTitle: 'The Fabryk',
   description:
-    'We are a blog run by two gay digital nomads hoping to inspire others to travel the world. Here you will find posts about travel, lifestyle, entrepreneurship, culture, personal development, failures, stories, and fun.',
+    'Join our adventure as two gay digital nomads explore the world and share their travel tips, lifestyle hacks, and inspiring stories. From entrepreneurship to personal growth, failures to fun, our blog has it all. Come explore with us!',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://thefabryk.com',
