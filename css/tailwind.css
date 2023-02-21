@@ -74,4 +74,8 @@ html, body {
   z-index: 100 !important;
 }
 
+.post-card:hover .post-card-title-wrapper {
+  opacity: 100% !important;
+}
+
 

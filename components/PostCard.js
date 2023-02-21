@@ -5,7 +5,7 @@ const PostCard = ({ slug, title, summary, images }) => {
   return (
     <Link href={`/blog/${slug}`} aria-label={`Link to ${title}`}>
       <div
-        className={`hover:scale-102 relative h-[300px] overflow-hidden rounded-md bg-indigo p-8 text-teal dark:bg-teal dark:text-indigo sm:drop-shadow-indigo dark:sm:drop-shadow-teal`}
+        className={`post-card relative h-[300px] overflow-hidden rounded-md bg-indigo p-8 text-teal hover:scale-105 dark:bg-teal dark:text-indigo sm:drop-shadow-indigo dark:sm:drop-shadow-teal`}
       >
         {containsImages && (
           <>
@@ -22,13 +22,14 @@ const PostCard = ({ slug, title, summary, images }) => {
           </>
         )}
         <div
-          className={` z-50 max-w-[90%] ${
-            containsImages && 'absolute bottom-0 left-5 text-indigo dark:text-teal'
+          className={`z-50 max-w-[90%] ${
+            containsImages &&
+            'post-card-title-wrapper absolute bottom-0 left-5 text-indigo opacity-80 dark:text-teal'
           }`}
         >
           <h2
-            className={`mb-4 text-sm font-bold sm:text-lg ${
-              containsImages && 'max-w-[100%] bg-teal p-2 dark:bg-indigo'
+            className={`text-md mb-4 font-bold sm:text-lg ${
+              containsImages && 'max-w-[100%] bg-teal p-0.5 dark:bg-indigo'
             }`}
           >
             {title}
