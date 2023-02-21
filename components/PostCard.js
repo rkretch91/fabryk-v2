@@ -13,6 +13,7 @@ const PostCard = ({ slug, title, summary, tags, images }) => {
             <Image
               src={images[0]}
               alt={title}
+              priority={true}
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
