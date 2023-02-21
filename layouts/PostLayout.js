@@ -110,12 +110,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="dark:prose-marker:text-teal prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(path)} rel="nofollow">
-                  Discuss on Twitter
-                </Link>
-              </div>
-              {siteMetadata.comments && (
+              {/* {siteMetadata.comments && (
                 <div
                   className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300"
                   id="comment"
@@ -125,7 +120,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   )}
                   {loadComments && <Comments commentsConfig={siteMetadata.comments} slug={slug} />}
                 </div>
-              )}
+              )} */}
             </div>
             <footer>
               <div className="divide-indigo text-sm font-medium leading-5 dark:divide-teal xl:col-start-1 xl:row-start-2 xl:divide-y">
