@@ -3,7 +3,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'The Fabryk',
-  author: 'Ryan Kretch and Fabio Marcato',
+  author: 'Ryan and Fabio',
   headerTitle: 'The Fabryk',
   description:
     'We are a blog run by two gay digital nomads hoping to inspire others to travel the world. Here you will find posts about travel, lifestyle, entrepreneurship, culture, personal development, failures, stories, and fun.',

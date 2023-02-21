@@ -9,7 +9,7 @@ function Pagination({ totalPages, currentPage }) {
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
   return (
-    <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+    <div className="space-y-2 pt-6 pb-8 text-indigo dark:text-teal md:space-y-5">
       <nav className="flex justify-between">
         {!prevPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
@@ -53,7 +53,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
   return (
     <>
-      <div className="container m-auto font-sans">
+      <div className="container m-auto w-11/12 font-sans">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="font-sans text-3xl font-medium tracking-tight text-indigo dark:text-teal sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             {title}
@@ -66,11 +66,11 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Search articles"
-                className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+                className="block w-full rounded-md border bg-white px-4 py-2 text-indigo focus:border-primary-500 focus:ring-primary-500 dark:bg-gray-800 dark:text-indigo"
               />
             </label>
             <svg
-              className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              className="absolute right-3 top-3 h-5 w-5 text-indigo"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           })}
         </div>
       </div>
-      <div className="container m-auto">
+      <div className="m-auto w-11/12">
         {pagination && pagination.totalPages > 1 && !searchValue && (
           <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
         )}

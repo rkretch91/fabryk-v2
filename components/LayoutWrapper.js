@@ -7,7 +7,6 @@ import Link from './Link'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { useTheme } from 'next-themes'
 import Image from './Image'
 const inter = Inter({
   subsets: ['latin'],
@@ -16,7 +15,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
-        <header className="container m-auto flex items-center justify-between py-10">
+        <header className="container m-auto flex w-11/12 items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
@@ -41,7 +40,7 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
-          <div className="z-50 flex items-center text-base leading-5">
+          <div className="z-40 flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
                 <Link
