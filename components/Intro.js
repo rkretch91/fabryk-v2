@@ -1,5 +1,5 @@
 import Typed from 'react-typed'
-import { NewsletterForm } from 'pliny/ui/NewsletterForm'
+import ContactForm from '@/components/ContactForm'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function Intro() {
@@ -19,11 +19,7 @@ export default function Intro() {
         </h1>
         {siteMetadata.newsletter.provider && (
           <div className="flex items-center justify-center pt-4">
-            <NewsletterForm
-              apiUrl="https://buttondown.email/api/emails/embed-subscribe/thefabryk"
-              style={{ background: 'white !important' }}
-              title="The Fabryk Newsletter Form"
-            />
+            <ContactForm />
           </div>
         )}
       </div>

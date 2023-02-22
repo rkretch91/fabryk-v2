@@ -1,7 +1,7 @@
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
-import { NewsletterForm } from 'pliny/ui/NewsletterForm'
+import ContactForm from '@/components/ContactForm'
 export default function AuthorLayout({ children, content }) {
   const { name, avatar, occupation, company, email, twitter, youtube } = content
   return (
@@ -34,11 +34,7 @@ export default function AuthorLayout({ children, content }) {
           <div className="prose max-w-none pt-8 pb-8 font-sans font-light text-indigo dark:text-teal dark:prose-dark xl:col-span-2">
             {children}{' '}
             <div className="flex items-center justify-center pt-4">
-              <NewsletterForm
-                apiUrl="https://buttondown.email/api/emails/embed-subscribe/thefabryk"
-                style={{ background: 'white !important' }}
-                title="The Fabryk Newsletter Form"
-              />
+              <ContactForm />
             </div>
             <Image
               src={'/static/images/about-us-1.jpg'}
