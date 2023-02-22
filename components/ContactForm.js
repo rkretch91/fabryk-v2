@@ -2,15 +2,33 @@ import React, { useState } from 'react'
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
-  const FORM_ENDPOINT = '/success'
+  const [state, setState] = useState()
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    setTimeout(() => {
-      setSubmitted(true)
-    }, 100)
+  const encode = (data) => {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
   }
 
+  const handleSubmit = (event) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...state }),
+    })
+      .then(() => console.log('Success!'))
+      .catch((error) => console.log(error))
+
+    event.preventDefault()
+    setSubmitted(true)
+  }
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.currentTarget.id]: e.currentTarget.value,
+    })
+  }
   if (submitted) {
     return (
       <>
@@ -27,7 +45,6 @@ export default function ContactForm() {
         data-netlify="true"
         name="contact"
         className="mb-4 flex w-full gap-4 rounded pt-6"
-        action={FORM_ENDPOINT}
         onSubmit={handleSubmit}
         method="POST"
       >
@@ -38,6 +55,7 @@ export default function ContactForm() {
             type="email"
             placeholder="Just need an email, sexy."
             name="email"
+            onChange={handleChange}
             className="border-0 bg-white bg-white px-3 py-3 text-sm text-indigo placeholder-gray-400 outline-none focus:outline-none"
             required
           />
