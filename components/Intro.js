@@ -19,7 +19,11 @@ export default function Intro() {
         </h1>
         {siteMetadata.newsletter.provider && (
           <div className="flex items-center justify-center pt-4">
-            <NewsletterForm style={{ background: 'white !important' }} title="" />
+            <NewsletterForm
+              apiUrl="https://buttondown.email/api/emails/embed-subscribe/thefabryk"
+              style={{ background: 'white !important' }}
+              title="The Fabryk Newsletter Form"
+            />
           </div>
         )}
       </div>

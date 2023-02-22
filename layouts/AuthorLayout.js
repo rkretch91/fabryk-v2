@@ -34,7 +34,11 @@ export default function AuthorLayout({ children, content }) {
           <div className="prose max-w-none pt-8 pb-8 font-sans font-light text-indigo dark:text-teal dark:prose-dark xl:col-span-2">
             {children}{' '}
             <div className="flex items-center justify-center pt-4">
-              <NewsletterForm style={{ background: 'white !important' }} title="" />
+              <NewsletterForm
+                apiUrl="https://buttondown.email/api/emails/embed-subscribe/thefabryk"
+                style={{ background: 'white !important' }}
+                title="The Fabryk Newsletter Form"
+              />
             </div>
             <Image
               src={'/static/images/about-us-1.jpg'}
