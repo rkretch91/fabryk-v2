@@ -16,7 +16,7 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...state }),
     })
-      .then(() => console.log('Success!'))
+      .then(() => console.log('Success'))
       .catch((error) => console.log(error))
 
     event.preventDefault()
@@ -29,6 +29,7 @@ export default function ContactForm() {
       [e.currentTarget.id]: e.currentTarget.value,
     })
   }
+
   if (submitted) {
     return (
       <>
@@ -53,6 +54,7 @@ export default function ContactForm() {
         <div className="mb-3 pt-0">
           <input
             type="email"
+            id="email"
             placeholder="Just need an email, sexy."
             name="email"
             onChange={handleChange}
