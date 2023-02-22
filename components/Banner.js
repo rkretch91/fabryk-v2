@@ -19,7 +19,15 @@ export default function Banner() {
           width={700}
           height={700}
           loading="eager"
-          className="absolute -bottom-10 left-0 z-50 block w-4/6 dark:hidden sm:-bottom-40 sm:bottom-16 sm:w-4/6 lg:w-3/6 xl:w-2/6"
+          className="absolute -bottom-5 left-0 z-50 block w-4/6 dark:hidden sm:-bottom-40 sm:bottom-16 sm:w-4/6 lg:-bottom-20 lg:w-3/6 xl:w-2/6"
+        />
+        <Image
+          src="/static/images/banner/guido_reni.png"
+          alt="pizza"
+          width={700}
+          height={700}
+          loading="eager"
+          className="absolute top-0 left-0 z-10 block w-3/6 dark:hidden sm:-bottom-40 sm:bottom-16 sm:w-4/6 lg:w-2/6 lg:w-3/6 xl:w-2/6"
         />
         <Image
           src="/static/images/banner/cat.png"
@@ -35,7 +43,7 @@ export default function Banner() {
           width={1000}
           height={1000}
           loading="eager"
-          className="sm:z-5 sm:w-6/6 absolute -left-20 bottom-56 block dark:hidden sm:left-auto sm:-right-20 sm:bottom-80 sm:z-0 md:bottom-96 md:z-0 md:w-5/6 lg:bottom-16 lg:z-20 lg:w-3/6"
+          className="sm:z-5 sm:w-6/6 absolute -left-20 bottom-48 block dark:hidden sm:left-auto sm:-right-20 sm:bottom-80 sm:z-0 md:bottom-96 md:z-0 md:w-5/6 lg:bottom-16 lg:z-20 lg:w-3/6"
         />
         <Image
           src="/static/images/banner/us.png"
@@ -56,7 +64,7 @@ export default function Banner() {
           className="w-6/6 absolute bottom-0 z-10 hidden dark:block lg:w-5/6 xl:w-4/6"
         />
         <Image
-          src="/static/images/banner/pizza-fritta.png"
+          src="/static/images/banner/pizzafritta_deybyk.png"
           alt="pizza-fritta"
           width={700}
           height={700}

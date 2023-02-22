@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from './Image'
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -34,6 +35,22 @@ export default function ContactForm() {
     return (
       <>
         <div className="text-md">
+          <Image
+            src="/static/images/cat-teal.png"
+            alt="bunker"
+            width={250}
+            height={250}
+            loading="eager"
+            className="m-auto mb-4 hidden w-5/6 dark:block"
+          />
+          <Image
+            src="/static/images/cat-indigo.png"
+            alt="bunker"
+            width={250}
+            height={250}
+            loading="eager"
+            className="m-auto mb-4 block w-5/6 dark:hidden"
+          />
           <h4 className="text-sm">(Thank you! We promise we won't be spammy bitches.)</h4>
         </div>
       </>
@@ -45,7 +62,7 @@ export default function ContactForm() {
         netlify-honeypot="bot-field"
         data-netlify="true"
         name="contact"
-        className="mb-4 flex w-full gap-4 rounded pt-6"
+        className="mb-4 w-full gap-4 rounded pt-6"
         onSubmit={handleSubmit}
         method="POST"
       >
@@ -58,13 +75,13 @@ export default function ContactForm() {
             placeholder="Just need an email, sexy."
             name="email"
             onChange={handleChange}
-            className="border-0 bg-white bg-white px-3 py-3 text-sm text-indigo placeholder-gray-400 outline-none focus:outline-none"
+            className="w-full border-0 bg-white bg-white px-3 py-3 text-sm text-indigo placeholder-gray-400 outline-none focus:outline-none"
             required
           />
         </div>
         <div className="mb-3 pt-0">
           <button
-            className="mr-1 mb-1 rounded bg-emerald-300 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-blue-600"
+            className=" mr-1 mb-1 w-full rounded bg-emerald-300 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-blue-600"
             type="submit"
           >
             Subscribe
