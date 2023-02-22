@@ -80,7 +80,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           {author.twitter && (
                             <Link
                               href={author.twitter}
-                              className="text-indigo hover:text-primary-600 dark:text-teal dark:hover:text-primary-400"
+                              className="text-indigo hover:text-black dark:text-teal dark:hover:text-white"
                             >
                               {author.twitter.replace('https://twitter.com/', '@')}
                             </Link>
@@ -126,7 +126,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="divide-indigo text-sm font-medium leading-5 dark:divide-teal xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs uppercase tracking-wide text-indigo dark:text-teal">
+                    <h2 className="text-xs uppercase tracking-wide text-indigo hover:opacity-80  dark:text-teal dark:hover:opacity-80">
                       Tags
                     </h2>
                     <div className="flex flex-wrap">
@@ -143,7 +143,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <h2 className="text-xs uppercase tracking-wide text-indigo dark:text-teal">
                           Previous Article
                         </h2>
-                        <div className="bg-indigo p-1 text-teal hover:text-primary-600 dark:bg-teal dark:text-indigo dark:hover:text-primary-400">
+                        <div className="bg-indigo p-1 text-teal hover:text-white hover:opacity-80 dark:bg-teal dark:text-indigo dark:hover:text-black dark:hover:opacity-80">
                           <Link href={`/${prev.path}`}>{prev.title}</Link>
                         </div>
                       </div>
@@ -153,7 +153,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <h2 className="text-xs uppercase tracking-wide text-indigo dark:text-teal">
                           Next Article
                         </h2>
-                        <div className="bg-indigo p-1 text-teal hover:text-primary-600 dark:bg-teal dark:text-indigo dark:hover:text-primary-400">
+                        <div className="bg-indigo p-1 text-teal hover:text-white hover:opacity-80 dark:bg-teal dark:text-indigo dark:hover:text-black dark:hover:text-primary-400 dark:hover:opacity-80">
                           <Link href={`/${next.path}`}>{next.title}</Link>
                         </div>
                       </div>
@@ -196,7 +196,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="pt-4 xl:pt-8">
                 <Link
                   href={`/${basePath}`}
-                  className="text-indigo hover:text-primary-600 dark:text-teal dark:hover:text-primary-400"
+                  className="text-indigo hover:text-black hover:opacity-80 dark:text-teal dark:hover:text-white dark:hover:opacity-80"
                   aria-label="Back to the blog"
                 >
                   &larr; Back to the blog
