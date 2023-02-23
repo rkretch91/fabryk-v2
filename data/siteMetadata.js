@@ -13,7 +13,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/twitter-card.jpg',
   email: 'fabryan2022@gmail.com',
   twitter: 'https://twitter.com/thefabryk',
   youtube: 'https://youtube.com/@therealfabryk',

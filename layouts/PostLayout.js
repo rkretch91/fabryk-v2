@@ -107,7 +107,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   ))}
                 </>
               )}
-              <div className="dark:prose-marker:text-teal prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
+              <div className="dark:prose-marker:text-teal prose max-w-none pt-10 pb-8 font-light text-indigo prose-img:w-full dark:text-teal dark:prose-invert dark:prose-h1:text-teal dark:prose-h2:text-teal dark:prose-h3:text-teal dark:prose-h4:text-teal dark:prose-a:text-teal dark:prose-strong:text-teal dark:prose-code:text-indigo dark:prose-pre:bg-teal dark:prose-hr:text-teal">
                 {children}
               </div>
               {/* {siteMetadata.comments && (
