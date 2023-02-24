@@ -6,7 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 export default function Intro() {
   return (
     <div className="align-center z-50 flex h-screen/3 flex-col justify-center pt-6 pb-8 md:space-y-5">
-      <div className="m-auto mb-2 text-center text-2xl font-bold">
+      <div className="mx-auto mb-2 text-center text-2xl font-bold">
         <h1>We are Fabio & Ryan</h1>
         {/* eslint-disable-next-line no-irregular-whitespace */}
         <h1>( ͡❛ ͜ʖ͡❛) ❤ (❛̃ ͜ʖ❛̃ )</h1>
@@ -21,7 +21,7 @@ export default function Intro() {
           life.
         </h1>
       </div>
-      <div className="m-auto mb-8 mt-0 flex space-x-4">
+      <div className="mx-auto flex space-x-4">
         <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
         <SocialIcon kind="youtube" href={siteMetadata.youtube} />
         <SocialIcon kind="twitter" href={siteMetadata.twitter} />
