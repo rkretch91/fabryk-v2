@@ -6,8 +6,9 @@ import siteMetadata from '@/data/siteMetadata'
 export default function Intro() {
   return (
     <div className="align-center z-50 flex h-screen/3 flex-col justify-center pt-6 pb-8 md:space-y-5">
-      <div className="m-auto mb-4 text-center text-2xl font-bold">
+      <div className="m-auto mb-2 text-center text-2xl font-bold">
         <h1>We are Fabio & Ryan</h1>
+        {/* eslint-disable-next-line no-irregular-whitespace */}
         <h1>( ͡❛ ͜ʖ͡❛) ❤ (❛̃ ͜ʖ❛̃ )</h1>
         <h1>
           Welcome to our{' '}
