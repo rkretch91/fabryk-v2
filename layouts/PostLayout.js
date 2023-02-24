@@ -101,7 +101,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                       height={1200}
                       src={image}
                       key={image}
-                      alt={image}
+                      alt={title}
                       style={{ marginTop: '8px' }}
                     />
                   ))}
