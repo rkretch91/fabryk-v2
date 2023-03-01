@@ -17,7 +17,8 @@ const YouTube = ({ id }) => {
         width="100%"
         height="400"
         src={'https://www.youtube.com/embed/' + id}
-        title="YouTube video player"
+        key={'id' + new Date().getTime()}
+        title={'id' + new Date().getTime()}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
@@ -32,7 +33,8 @@ const GoogleMap = ({ id }) => {
         src={`https://www.google.com/maps/d/u/0/embed?mid=${id}&ehbc=2E312F`}
         width="100%"
         height="450"
-        title="Google Map"
+        title={'id' + new Date().getTime()}
+        key={'id' + new Date().getTime()}
       ></iframe>
     </div>
   )
