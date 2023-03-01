@@ -68,20 +68,20 @@ export default function ContactForm() {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <div className="mb-3 pt-0">
+        <div className="mb-4 pt-0">
           <input
             type="email"
             id="email"
             placeholder="Just need an email, sexy."
             name="email"
             onChange={handleChange}
-            className="w-full border-0 bg-white bg-white px-3 py-3 text-sm text-indigo placeholder-gray-400 outline-none focus:outline-none"
+            className="h-[48px] w-full border-0 bg-white bg-white px-3 py-3 text-sm text-indigo placeholder-gray-400 outline-none focus:outline-none"
             required
           />
         </div>
         <div className="mb-3 pt-0">
           <button
-            className=" mr-1 mb-1 w-full rounded bg-emerald-300 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-blue-600"
+            className=" mr-1 mb-1 h-[48px] w-full rounded bg-emerald-300 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-blue-600"
             type="submit"
           >
             Subscribe
