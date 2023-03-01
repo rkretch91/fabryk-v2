@@ -15,11 +15,24 @@ const YouTube = ({ id }) => {
     <div>
       <iframe
         width="100%"
-        height="450"
+        height="400"
         src={'https://www.youtube.com/embed/' + id}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
+      ></iframe>
+    </div>
+  )
+}
+
+const GoogleMap = ({ id }) => {
+  return (
+    <div>
+      <iframe
+        src={`https://www.google.com/maps/d/u/0/embed?mid=${id}&ehbc=2E312F`}
+        width="100%"
+        height="450"
+        title="Google Map"
       ></iframe>
     </div>
   )
@@ -33,4 +46,5 @@ export const MDXComponents = {
   wrapper: Wrapper,
   BlogNewsletterForm,
   YouTube,
+  GoogleMap,
 }
