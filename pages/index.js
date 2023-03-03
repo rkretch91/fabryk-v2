@@ -88,7 +88,7 @@ export default function Home({ posts, initialDisplayPosts = [] }) {
       <SectionContainer>
         {posts.length > MAX_DISPLAY && (
           <button className="theme-button float-right h-[48px] w-auto rounded-sm p-2 font-sans text-base font-medium leading-6">
-            <Link href="/blog" aria-label="All posts">
+            <Link href="/blog/page/2" aria-label="All posts">
               More, More, More
             </Link>
           </button>
