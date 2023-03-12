@@ -68,7 +68,7 @@ export default function ContactForm() {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <div className="mb-4 pt-0">
+        <div className="mb-5 pt-0">
           <input
             type="email"
             id="email"
